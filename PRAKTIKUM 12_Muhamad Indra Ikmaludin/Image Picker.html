@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+
+        function image_picker(){
+            const daftar_gambar = ["kucing1.jpg", "kucing2.jpg", "kucing3.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if( pilihan == "kucing1"){
+                let select = daftar_gambar[0];
+                document.getElementById("gambar").src = `images/${select}`;
+                
+            }
+
+            if( pilihan == "kucing2"){
+                let select = daftar_gambar[1];
+                document.getElementById("gambar").src = `images/${select}`;
+
+            }
+
+            if( pilihan == "kucing3"){
+                let select = daftar_gambar[2];
+                document.getElementById("gambar").src = `images/${select}`;
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">IMAGE KUCING GEMES</h1>
+
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar :</option>
+        <option value="kucing1">kucing1</option>
+        <option value="kucing2">kucing2</option>
+        <option value="kucing3">kucing3</option>
+    </select>
+
+    
+    <div class="container">
+        <br>
+        <img id="gambar" width="300px">
+    </div>
+    
+</body>
+</html>
